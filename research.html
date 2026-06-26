@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Ayan Bin Rafaih</title>
+<meta name="description" content="Research experience, publications, and conference presentations by Ayan Bin Rafaih.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html#home" class="logo">Ayan Bin Rafaih</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#awards">Awards &amp; Honours</a>
+      <a href="research.html" class="is-active">Research</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="section-inner page-header">
+    <h1>Research</h1>
+    <p>Research experience, publications, and conference presentations, spanning computational
+       astrophysics, machine learning, and robotic surgery.</p>
+  </div>
+
+  <!-- ============================= EXPERIENCE ============================= -->
+  <section id="experience">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="eyebrow">Experience</p>
+        <h2>Research &amp; Internship Experience</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-dates">Jun 2024 – Sep 2025</span>
+          </div>
+          <h3>Research Intern</h3>
+          <p class="timeline-org">Harvard University &amp; Université Côte d'Azur — Computational Astrophysics · Nice, France</p>
+          <ul>
+            <li>Reached 92.2% accuracy on exoplanet transit false-positive classification using Random Forest, CNN, and SVM models, with exhaustive hyperparameter search.</li>
+            <li>Cut input feature dimensionality by up to 245× via PCA and derived numerical parameters, preserving accuracy while enabling CPU-only inference.</li>
+            <li>First-author paper published in the Open Journal of Astrophysics; accepted for an oral poster at the 247th AAS Meeting.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-dates">Apr 2024 – Aug 2024</span>
+          </div>
+          <h3>Software Engineering Intern (ML)</h3>
+          <p class="timeline-org">DreamWave AI — Generative Models · San Francisco, California</p>
+          <ul>
+            <li>Reduced GAN training instability and sped up convergence on high-resolution facial synthesis by moving from a vanilla GAN to DCGAN/WGAN with gradient-penalty Wasserstein loss, FP16 mixed precision, and LR scheduling.</li>
+            <li>Maintained and extended a facial-image annotation pipeline operating at 25,000,000+ image scale.</li>
+            <li>Improved ground-truth label quality across 3,000+ headshots via a dual-label pipeline combining model-generated soft labels with human annotation.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-dates">Jul 2024 – Aug 2025</span>
+          </div>
+          <h3>Research Intern</h3>
+          <p class="timeline-org">University College London — Optimisation Frameworks, ML for Robotics · London, UK</p>
+          <ul>
+            <li>Built a Random Forest framework to classify 3 surgical expertise levels from da Vinci robotic kinematic data using acceleration-based features.</li>
+            <li>Optimised generalisation on a small, class-imbalanced clinical dataset with Bayesian optimisation and 5-fold cross-validation.</li>
+            <li>Work accepted for an oral podium presentation at the Society of Robotic Surgery (SRS) 2025.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-dates">Jun 2025 – Dec 2025</span>
+          </div>
+          <h3>Research Intern</h3>
+          <p class="timeline-org">IPAC at Caltech — Transfer Learning, Parametric Retrievals · Pasadena, California</p>
+          <ul>
+            <li>Designed a transfer-learning pipeline for atmospheric parameter prediction across 3,000,000+ exoplanet spectra.</li>
+            <li>Fine-tuned a pre-trained GAN (ExoGAN) for non-Bayesian forward retrieval, improving scalability over traditional Bayesian inference.</li>
+            <li>Evaluated neural networks across 10 planetary parameters using posterior distributions and density plots.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= PUBLICATIONS ============================= -->
+  <section id="publications">
+    <div class="section-inner section-inner--wide">
+      <div class="section-head">
+        <p class="eyebrow">Publications</p>
+        <h2>Papers</h2>
+        <p>Filter by topic, or use the pills on each entry for the abstract and citation.</p>
+      </div>
+
+      <div class="pub-filters">
+        <button class="pub-filter is-active" data-topic="all">All</button>
+        <button class="pub-filter" data-topic="astro">Astrophysics</button>
+        <button class="pub-filter" data-topic="ml">Machine Learning</button>
+        <button class="pub-filter" data-topic="surgery">Robotic Surgery</button>
+        <button class="pub-filter" data-topic="eng">Engineering</button>
+      </div>
+
+      <ul class="pub-list">
+
+        <!-- 1 -->
+        <li class="pub-item" data-topics="astro ml">
+          <h3 class="pub-title">
+            <a href="https://astro.theoj.org/article/154054-detecting-false-positives-with-derived-planetary-parameters-experimenting-with-the-kepler-dataset" target="_blank" rel="noopener">
+              Detecting False Positives with Derived Planetary Parameters: Experimenting with the KEPLER Dataset
+            </a>
+          </h3>
+          <p class="pub-authors"><strong>Ayan Bin Rafaih</strong>, Zachary Murray</p>
+          <p class="pub-venue">The Open Journal of Astrophysics · 2025</p>
+
+          <div class="pill-row">
+            <a class="pill" href="https://astro.theoj.org/article/154054-detecting-false-positives-with-derived-planetary-parameters-experimenting-with-the-kepler-dataset" target="_blank" rel="noopener">PDF</a>
+            <a class="pill" href="https://doi.org/10.48550/arXiv.2508.13801" target="_blank" rel="noopener">arXiv</a>
+            <button class="pill" data-target="panel-1-abs" aria-expanded="false">Abstract</button>
+            <button class="pill" data-target="panel-1-bib" aria-expanded="false">BibTeX</button>
+            <span class="pill is-disabled">Poster — add link</span>
+          </div>
+
+          <div class="pub-panel" id="panel-1-abs">
+            <p>
+              Tests whether transit false-positive detection can rely on a handful of
+              <em>derived</em> planetary parameters — stellar radius, transit depth and
+              duration, odd–even depth comparison — instead of full light curves. Across
+              four classifiers (logistic regression, random forest, SVM, CNN), this
+              lighter feature set recovers roughly 90% of known false positives, with the
+              random forest and CNN giving the strongest accuracy / precision–recall
+              trade-off (87.8% and 92.2% validation accuracy respectively). Performance is
+              also broken down by the Kepler vetting flags: the stellar-eclipse flag is
+              easiest to classify, while centroid-offset and ephemeris-match flags are the
+              hardest.
+            </p>
+          </div>
+          <div class="pub-panel" id="panel-1-bib">
+            <pre>@article{rafaih2025kepler,
+  author  = {Bin Rafaih, Ayan and Murray, Zachary},
+  title   = {Detecting False Positives with Derived Planetary
+             Parameters: Experimenting with the KEPLER Dataset},
+  journal = {The Open Journal of Astrophysics},
+  year    = {2025},
+  url     = {https://astro.theoj.org/article/154054}
+}</pre>
+            <button class="pub-panel-copy">Copy</button>
+          </div>
+        </li>
+
+        <!-- 2 -->
+        <li class="pub-item" data-topics="astro ml">
+          <h3 class="pub-title">AstroThink: Can Large Language Models Reason Their Way Through Astrophysics Olympiad Problems?</h3>
+          <p class="pub-authors"><strong>Ayan Bin Rafaih</strong>, Taner Shakir</p>
+          <p class="pub-venue">Under review, Artificial Intelligence Review · accepted for oral presentation, ICMLC 2026</p>
+
+          <div class="pill-row">
+            <span class="pill is-disabled">Preprint — coming soon</span>
+            <button class="pill" data-target="panel-2-abs" aria-expanded="false">Abstract</button>
+            <button class="pill" data-target="panel-2-bib" aria-expanded="false">BibTeX</button>
+          </div>
+
+          <div class="pub-panel" id="panel-2-abs">
+            <p>
+              Olympiad benchmarks already exist for mathematics (IMO), informatics (IOI),
+              and physics (IPhO), but astrophysics has comparatively little coverage beyond
+              multiple-choice formats. We evaluate several state-of-the-art LLMs on the
+              2024 International Olympiad on Astronomy and Astrophysics (IOAA) exam,
+              scoring them with a combination of human and LLM judges plus a qualitative
+              error taxonomy. No model reaches medal-level performance — the strongest,
+              DeepSeek-V3.1, scores 44.83%. The models struggle most with multi-step
+              reasoning, often applying irrelevant methods or misreading a problem's
+              physical setup.
+            </p>
+          </div>
+          <div class="pub-panel" id="panel-2-bib">
+            <pre>@misc{rafaih2026astrothink,
+  author = {Bin Rafaih, Ayan and Shakir, Taner},
+  title  = {AstroThink: Can Large Language Models Reason Their Way
+            Through Astrophysics Olympiad Problems?},
+  note   = {Under review, Artificial Intelligence Review;
+            accepted for oral presentation, ICMLC 2026},
+  year   = {2026}
+}</pre>
+            <button class="pub-panel-copy">Copy</button>
+          </div>
+        </li>
+
+        <!-- 3 -->
+        <li class="pub-item" data-topics="surgery">
+          <h3 class="pub-title">
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41209917/" target="_blank" rel="noopener">
+              Sustainability in Surgery: Problems, Solutions, and Recommendations
+            </a>
+          </h3>
+          <p class="pub-authors"><strong>Ayan Bin Rafaih</strong>, Kaso Ari</p>
+          <p class="pub-venue">Cureus · 2025</p>
+
+          <div class="pill-row">
+            <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/41209917/" target="_blank" rel="noopener">PDF</a>
+            <button class="pill" data-target="panel-3-abs" aria-expanded="false">Abstract</button>
+            <button class="pill" data-target="panel-3-bib" aria-expanded="false">BibTeX</button>
+          </div>
+
+          <div class="pub-panel" id="panel-3-abs">
+            <p>
+              Surgical care is a notable contributor to healthcare's carbon footprint. This
+              review traces that footprint to operating-room waste, energy use,
+              pharmaceutical waste, and single-use devices, then surveys current mitigation
+              strategies — from waste reduction and energy efficiency to sustainable
+              procurement and circular-economy approaches. It closes with practical
+              recommendations for administrators, surgical teams, and policymakers, framing
+              sustainability as both an environmental obligation and a route to cost
+              savings and better care delivery.
+            </p>
+          </div>
+          <div class="pub-panel" id="panel-3-bib">
+            <pre>@article{rafaih2025sustainability,
+  author  = {Bin Rafaih, Ayan and Ari, Kaso},
+  title   = {Sustainability in Surgery: Problems, Solutions,
+             and Recommendations},
+  journal = {Cureus},
+  year    = {2025},
+  url     = {https://pubmed.ncbi.nlm.nih.gov/41209917/}
+}</pre>
+            <button class="pub-panel-copy">Copy</button>
+          </div>
+        </li>
+
+        <!-- 4 -->
+        <li class="pub-item" data-topics="surgery">
+          <h3 class="pub-title">
+            <a href="https://pubmed.ncbi.nlm.nih.gov/40889021/" target="_blank" rel="noopener">
+              Comparing Surgical Outcomes of Robotic and Laparoscopic or Open Ileal Pouch–Anal Anastomosis: A Systematic Review and Meta-Analysis
+            </a>
+          </h3>
+          <p class="pub-authors">Abdelrahman Abdelaal, Kaso Ari, <strong>Ayan Bin Rafaih</strong>, Ayaz Ahmed Memon, Irshad Shaikh</p>
+          <p class="pub-venue">Journal of Robotic Surgery · 2025</p>
+
+          <div class="pill-row">
+            <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/40889021/" target="_blank" rel="noopener">PDF</a>
+            <button class="pill" data-target="panel-4-abs" aria-expanded="false">Abstract</button>
+            <button class="pill" data-target="panel-4-bib" aria-expanded="false">BibTeX</button>
+          </div>
+
+          <div class="pub-panel" id="panel-4-abs">
+            <p>
+              A systematic review and meta-analysis (10 studies, 3,166 patients) comparing
+              robotic, laparoscopic, and open ileal pouch–anal anastomosis for ulcerative
+              colitis and familial adenomatous polyposis. Robotic IPAA was associated with
+              a shorter hospital stay and a non-significant trend toward fewer conversions
+              to open surgery, but longer operative times; blood loss and postoperative
+              complication rates were comparable across approaches.
+            </p>
+          </div>
+          <div class="pub-panel" id="panel-4-bib">
+            <pre>@article{abdelaal2025ipaa,
+  author  = {Abdelaal, Abdelrahman and Ari, Kaso and Bin Rafaih, Ayan
+             and Memon, Ayaz Ahmed and Shaikh, Irshad},
+  title   = {Comparing Surgical Outcomes of Robotic and Laparoscopic
+             or Open Ileal Pouch--Anal Anastomosis: A Systematic
+             Review and Meta-Analysis},
+  journal = {Journal of Robotic Surgery},
+  year    = {2025},
+  url     = {https://pubmed.ncbi.nlm.nih.gov/40889021/}
+}</pre>
+            <button class="pub-panel-copy">Copy</button>
+          </div>
+        </li>
+
+        <!-- 5 -->
+        <li class="pub-item" data-topics="surgery">
+          <h3 class="pub-title">
+            <a href="https://link.springer.com/article/10.1007/s11701-025-02573-1" target="_blank" rel="noopener">
+              Robotic Beyond Total Mesorectal Excision (bTME) for Locally Advanced and Recurrent Anorectal Cancer — A Systematic Review
+            </a>
+          </h3>
+          <p class="pub-authors">Joachim Cheng En Ho, Aryan Raj Goel, Muriel Sirgi, <strong>Ayan Bin Rafaih</strong>, Ayaz Ahmed Memon, Irshad Shaikh</p>
+          <p class="pub-venue">Journal of Robotic Surgery · 2025</p>
+
+          <div class="pill-row">
+            <a class="pill" href="https://link.springer.com/article/10.1007/s11701-025-02573-1" target="_blank" rel="noopener">PDF</a>
+            <button class="pill" data-target="panel-5-abs" aria-expanded="false">Abstract</button>
+            <button class="pill" data-target="panel-5-bib" aria-expanded="false">BibTeX</button>
+          </div>
+
+          <div class="pub-panel" id="panel-5-abs">
+            <p>
+              A systematic-review protocol assessing the safety and feasibility of robotic
+              surgery for locally advanced or recurrent rectal cancer requiring a
+              beyond-total-mesorectal-excision approach, focused on oncological clearance,
+              survival and recurrence rates, and perioperative outcomes — following PRISMA
+              guidance with dual independent screening and risk-of-bias assessment.
+            </p>
+          </div>
+          <div class="pub-panel" id="panel-5-bib">
+            <pre>@article{ho2025btme,
+  author  = {Ho, Joachim Cheng En and Goel, Aryan Raj and Sirgi, Muriel
+             and Bin Rafaih, Ayan and Memon, Ayaz Ahmed and Shaikh, Irshad},
+  title   = {Robotic Beyond Total Mesorectal Excision (bTME) for
+             Locally Advanced and Recurrent Anorectal Cancer --
+             A Systematic Review},
+  journal = {Journal of Robotic Surgery},
+  year    = {2025},
+  url     = {https://link.springer.com/article/10.1007/s11701-025-02573-1}
+}</pre>
+            <button class="pub-panel-copy">Copy</button>
+          </div>
+        </li>
+
+        <!-- 6 -->
+        <li class="pub-item" data-topics="eng">
+          <h3 class="pub-title">
+            <a href="https://www.irjet.net/archives/V12/i7/IRJET-V12I725.pdf" target="_blank" rel="noopener">
+              Robotic Prosthetic Arm with 4 Degree of Freedom Rotational Movement
+            </a>
+          </h3>
+          <p class="pub-authors"><strong>Ayan Bin Rafaih</strong></p>
+          <p class="pub-venue">International Research Journal of Engineering and Technology · 2025</p>
+
+          <div class="pill-row">
+            <a class="pill" href="https://www.irjet.net/archives/V12/i7/IRJET-V12I725.pdf" target="_blank" rel="noopener">PDF</a>
+            <button class="pill" data-target="panel-6-abs" aria-expanded="false">Abstract</button>
+            <button class="pill" data-target="panel-6-bib" aria-expanded="false">BibTeX</button>
+          </div>
+
+          <div class="pub-panel" id="panel-6-abs">
+            <p>
+              A low-cost, Arduino-driven 4-DOF prosthetic arm for post-amputation
+              rehabilitation, using four servo motors for radial and lateral movement,
+              Bluetooth (HC-05) control from a simple Android app, and a 3D-printed frame
+              to keep manufacturing costs down. Bench tests showed reliable gripping,
+              lifting, and positioning within the arm's workspace.
+            </p>
+          </div>
+          <div class="pub-panel" id="panel-6-bib">
+            <pre>@article{rafaih2025prosthetic,
+  author  = {Bin Rafaih, Ayan},
+  title   = {Robotic Prosthetic Arm with 4 Degree of Freedom
+             Rotational Movement},
+  journal = {International Research Journal of Engineering
+             and Technology},
+  year    = {2025},
+  url     = {https://www.irjet.net/archives/V12/i7/IRJET-V12I725.pdf}
+}</pre>
+            <button class="pub-panel-copy">Copy</button>
+          </div>
+        </li>
+
+        <!-- 7 -->
+        <li class="pub-item" data-topics="surgery">
+          <h3 class="pub-title">
+            <a href="https://fg.bmj.com/content/16/6/495.info" target="_blank" rel="noopener">
+              Exploring the Roles of Extended Reality Technologies in Advancing Colorectal Surgical Training
+            </a>
+          </h3>
+          <p class="pub-authors">Dominic Araszkiewicz, Taner Shakir, Gita Lingam, <strong>Ayan Bin Rafaih</strong>, Manish Chand</p>
+          <p class="pub-venue">Frontline Gastroenterology · 2025</p>
+
+          <div class="pill-row">
+            <a class="pill" href="https://fg.bmj.com/content/16/6/495.info" target="_blank" rel="noopener">PDF</a>
+            <button class="pill" data-target="panel-7-abs" aria-expanded="false">Abstract</button>
+            <button class="pill" data-target="panel-7-bib" aria-expanded="false">BibTeX</button>
+          </div>
+
+          <div class="pub-panel" id="panel-7-abs">
+            <p>
+              A review of augmented, virtual, and mixed reality's role in colorectal
+              surgical training amid rising waiting lists and a shortage of trained
+              endoscopists. AR supports simulation and intraoperative guidance through
+              image overlays and 3D visualisation of anatomy; VR has the stronger evidence
+              base, particularly for endoscopy, laparoscopy, and robotics simulation. The
+              review also flags open questions around standardisation and
+              patient-communication training that current XR tools don't address.
+            </p>
+          </div>
+          <div class="pub-panel" id="panel-7-bib">
+            <pre>@article{araszkiewicz2025xr,
+  author  = {Araszkiewicz, Dominic and Shakir, Taner and Lingam, Gita
+             and Bin Rafaih, Ayan and Chand, Manish},
+  title   = {Exploring the Roles of Extended Reality Technologies
+             in Advancing Colorectal Surgical Training},
+  journal = {Frontline Gastroenterology},
+  year    = {2025},
+  url     = {https://fg.bmj.com/content/16/6/495.info}
+}</pre>
+            <button class="pub-panel-copy">Copy</button>
+          </div>
+        </li>
+
+        <!-- 8 -->
+        <li class="pub-item" data-topics="eng">
+          <h3 class="pub-title">
+            <a href="https://www.irjet.net/archives/V12/i1/IRJET-V12I173.pdf" target="_blank" rel="noopener">
+              Gyro Sensor Based Smart Helmet for Automated Early Accident Detection
+            </a>
+          </h3>
+          <p class="pub-authors"><strong>Ayan Bin Rafaih</strong></p>
+          <p class="pub-venue">International Research Journal of Engineering and Technology · 2025</p>
+
+          <div class="pill-row">
+            <a class="pill" href="https://www.irjet.net/archives/V12/i1/IRJET-V12I173.pdf" target="_blank" rel="noopener">PDF</a>
+            <button class="pill" data-target="panel-8-abs" aria-expanded="false">Abstract</button>
+            <button class="pill" data-target="panel-8-bib" aria-expanded="false">BibTeX</button>
+          </div>
+
+          <div class="pub-panel" id="panel-8-abs">
+            <p>
+              An Arduino-based helmet that uses a gyroscope to flag sudden, abnormal
+              accelerations consistent with a crash. On detection, a GSM module sends an
+              SMS alert — including GPS coordinates from a paired module — to a pre-set
+              emergency contact, giving riders an automatic early-warning layer on top of
+              standard helmet safety.
+            </p>
+          </div>
+          <div class="pub-panel" id="panel-8-bib">
+            <pre>@article{rafaih2025helmet,
+  author  = {Bin Rafaih, Ayan},
+  title   = {Gyro Sensor Based Smart Helmet for Automated
+             Early Accident Detection},
+  journal = {International Research Journal of Engineering
+             and Technology},
+  year    = {2025},
+  url     = {https://www.irjet.net/archives/V12/i1/IRJET-V12I173.pdf}
+}</pre>
+            <button class="pub-panel-copy">Copy</button>
+          </div>
+        </li>
+
+        <!-- 9 -->
+        <li class="pub-item" data-topics="surgery ml">
+          <h3 class="pub-title">
+            <a href="https://www.cureus.com/articles/319675-artificial-intelligence-driven-approaches-to-managing-surgeon-fatigue-and-improving-performance" target="_blank" rel="noopener">
+              Artificial Intelligence Driven Approaches to Managing Surgeon Fatigue and Improving Performance
+            </a>
+          </h3>
+          <p class="pub-authors"><strong>Ayan Bin Rafaih</strong>, Kaso Ari</p>
+          <p class="pub-venue">Cureus · 2024</p>
+
+          <div class="pill-row">
+            <a class="pill" href="https://www.cureus.com/articles/319675-artificial-intelligence-driven-approaches-to-managing-surgeon-fatigue-and-improving-performance" target="_blank" rel="noopener">PDF</a>
+            <button class="pill" data-target="panel-9-abs" aria-expanded="false">Abstract</button>
+            <button class="pill" data-target="panel-9-bib" aria-expanded="false">BibTeX</button>
+          </div>
+
+          <div class="pub-panel" id="panel-9-abs">
+            <p>
+              A review of how AI-driven monitoring — heart-rate variability, EEG, and
+              computer-vision-based behavioural analysis — could support real-time fatigue
+              detection in surgeons, where conventional measures like duty-hour limits and
+              scheduled breaks fall short. The paper outlines how predictive models could
+              trigger personalised break schedules or task redistribution, while flagging
+              the data-privacy and autonomy questions that adoption raises.
+            </p>
+          </div>
+          <div class="pub-panel" id="panel-9-bib">
+            <pre>@article{rafaih2024fatigue,
+  author  = {Bin Rafaih, Ayan and Ari, Kaso},
+  title   = {Artificial Intelligence Driven Approaches to Managing
+             Surgeon Fatigue and Improving Performance},
+  journal = {Cureus},
+  year    = {2024},
+  url     = {https://www.cureus.com/articles/319675}
+}</pre>
+            <button class="pub-panel-copy">Copy</button>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================= PRESENTATIONS ============================= -->
+  <section id="presentations">
+    <div class="section-inner section-inner--wide">
+      <div class="section-head">
+        <p class="eyebrow">Presentations</p>
+        <h2>Conference Talks &amp; Posters</h2>
+      </div>
+
+      <ul class="talk-list">
+        <li class="talk-item">
+          <div class="talk-year">2026</div>
+          <div>
+            <div class="talk-title">Detecting False Positives with Derived Planetary Parameters: Experimenting with the KEPLER Dataset</div>
+            <div class="talk-meta"><span class="talk-type">Oral Poster</span>247th Meeting of the American Astronomical Society (AAS) · Phoenix, Arizona</div>
+          </div>
+        </li>
+        <li class="talk-item">
+          <div class="talk-year">2026</div>
+          <div>
+            <div class="talk-title">AstroThink: Can Large Language Models Reason Their Way Through Astrophysics Olympiad Problems?</div>
+            <div class="talk-meta"><span class="talk-type">Oral</span>18th International Conference on Machine Learning and Computing (ICMLC) · Nanjing, China</div>
+          </div>
+        </li>
+        <li class="talk-item">
+          <div class="talk-year">2025</div>
+          <div>
+            <div class="talk-title">BOB-RFM: Robotic Surgical Skills Classification Using Bayesian-Optimisation Based Random Forests</div>
+            <div class="talk-meta"><span class="talk-type">Oral Podium</span>Society of Robotic Surgery Annual Meeting · Strasbourg, France — one of the only high-school researchers to present orally that year</div>
+          </div>
+        </li>
+        <li class="talk-item">
+          <div class="talk-year">2025</div>
+          <div>
+            <div class="talk-title">Robotic Beyond Total Mesorectal Excision for Locally Advanced and Recurrent Anorectal Cancer — A Systematic Review</div>
+            <div class="talk-meta"><span class="talk-type">Poster</span>European Society of Coloproctology 20th Annual Meeting (Tripartite Colorectal Meeting) · Paris, France</div>
+          </div>
+        </li>
+        <li class="talk-item">
+          <div class="talk-year">2024</div>
+          <div>
+            <div class="talk-title">Using a Machine-Learning Pipeline Combining SVMs and Random Forest Regression to Detect Exoplanet Transit Signals from Derived Parameters</div>
+            <div class="talk-meta"><span class="talk-type">Oral Poster</span>New York Academy of Sciences (NYAS) 15th Machine Learning Symposium · New York, USA</div>
+          </div>
+        </li>
+        <li class="talk-item">
+          <div class="talk-year">2024</div>
+          <div>
+            <div class="talk-title">Using KNN and Naïve Bayes as Probabilistic Methods to Detect Exoplanets, with Isolation Forest for Contamination Detection</div>
+            <div class="talk-meta"><span class="talk-type">Poster</span>Izmir International Science and Engineering Fair (IISEF) · Izmir, Turkey</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-wrap">
+    <p>© 2026 Ayan Bin Rafaih.</p>
+    <div class="social-row">
+      <a href="mailto:ayanbrafaih@gmail.com">Email</a>
+      <a href="https://github.com/ayanbinrafaih" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/ayanbinrafaih" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=3FV8oHsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
