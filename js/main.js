@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initPubPanels();
   initCopyButtons();
   initPubFilters();
+  initEmailCopy();
 });
 
 /* ---------- Mobile nav ---------- */
@@ -26,6 +27,32 @@ function initNavToggle() {
     link.addEventListener("click", function () {
       nav.classList.remove("is-open");
       toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+function initEmailCopy() {
+  document.querySelectorAll("[data-email]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var email = btn.getAttribute("data-email");
+      var tooltip = btn.querySelector(".icon-tooltip");
+      var original = tooltip ? tooltip.textContent : null;
+
+      var showCopied = function () {
+        if (!tooltip) return;
+        tooltip.textContent = "Copied!";
+        btn.classList.add("show-tooltip");
+        setTimeout(function () {
+          tooltip.textContent = original;
+          btn.classList.remove("show-tooltip");
+        }, 1500);
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(showCopied).catch(function () { fallbackCopy(email, showCopied); });
+      } else {
+        fallbackCopy(email, showCopied);
+      }
     });
   });
 }

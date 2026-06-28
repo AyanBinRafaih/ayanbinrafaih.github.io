@@ -34,72 +34,82 @@
 
   <div class="section-inner page-header">
     <h1>Research</h1>
-    <p>Research experience, publications, and conference presentations, spanning computational
-       astrophysics, machine learning, and robotic surgery.</p>
+    <p>Updated June 2026</p>
   </div>
-
+  
   <!-- ============================= EXPERIENCE ============================= -->
   <section id="experience">
     <div class="section-inner">
       <div class="section-head">
-        <p class="eyebrow">Experience</p>
-        <h2>Research &amp; Internship Experience</h2>
+        <h2>Experience</h2>
       </div>
-
+  
       <div class="timeline">
-
+  
+        <!-- Harvard -->
         <div class="timeline-item">
           <div class="timeline-meta">
-            <span class="timeline-dates">Jun 2024 – Sep 2025</span>
+            <span class="timeline-dates">Jun 2024 – Sep 2025 · Cambridge, MA . Nice, France</span>
           </div>
-          <h3>Research Intern</h3>
-          <p class="timeline-org">Harvard University &amp; Université Côte d'Azur — Computational Astrophysics · Nice, France</p>
-          <ul>
-            <li>Reached 92.2% accuracy on exoplanet transit false-positive classification using Random Forest, CNN, and SVM models, with exhaustive hyperparameter search.</li>
-            <li>Cut input feature dimensionality by up to 245× via PCA and derived numerical parameters, preserving accuracy while enabling CPU-only inference.</li>
-            <li>First-author paper published in the Open Journal of Astrophysics; accepted for an oral poster at the 247th AAS Meeting.</li>
-          </ul>
+  
+          <h3>Research Intern: Computational Astrophysics</h3>
+  
+          <p class="timeline-org">
+            Harvard-Smithsonian Center for Astrophysics &amp; Université Côte d'Azur, supervised by Dr. Zachary Murray
+          </p>
+  
+          <p class="timeline-desc">
+            Lightweight machine learning frameworks for false positive exoplanet detection (KEPLER).
+          </p>
+        </div>
+  
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-dates">Apr 2024 – Aug 2024 · San Francisco, CA</span>
+          </div>
+  
+          <h3>Engineering Intern: Generative Machine Learning</h3>
+  
+          <p class="timeline-org">
+            DreamWave AI
+          </p>
+  
+          <p class="timeline-desc">
+            Deep convolutional and Wasserstein generative adversarial networks, mixed-precision training, gradient penalties.
+          </p>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-meta">
-            <span class="timeline-dates">Apr 2024 – Aug 2024</span>
+            <span class="timeline-dates">Jul 2024 – Aug 2025 · London, UK</span>
           </div>
-          <h3>Software Engineering Intern (ML)</h3>
-          <p class="timeline-org">DreamWave AI — Generative Models · San Francisco, California</p>
-          <ul>
-            <li>Reduced GAN training instability and sped up convergence on high-resolution facial synthesis by moving from a vanilla GAN to DCGAN/WGAN with gradient-penalty Wasserstein loss, FP16 mixed precision, and LR scheduling.</li>
-            <li>Maintained and extended a facial-image annotation pipeline operating at 25,000,000+ image scale.</li>
-            <li>Improved ground-truth label quality across 3,000+ headshots via a dual-label pipeline combining model-generated soft labels with human annotation.</li>
-          </ul>
+  
+          <h3>Research Intern: Machine Learning Frameworks for Kinematic Data from Robotic Surgery</h3>
+  
+          <p class="timeline-org">
+            University College London, supervised by Prof. Evangelos Mazomenos
+          </p>
+  
+          <p class="timeline-desc">
+            Bayesian-Optimised Based Random Forest Model for Automated Surgical Skill Classification, including kinematics like angular acceleration and tortuosity.
         </div>
-
+  
         <div class="timeline-item">
           <div class="timeline-meta">
-            <span class="timeline-dates">Jul 2024 – Aug 2025</span>
+            <span class="timeline-dates">Jun 2025 – Dec 2025 · Pasadena, CA</span>
           </div>
-          <h3>Research Intern</h3>
-          <p class="timeline-org">University College London — Optimisation Frameworks, ML for Robotics · London, UK</p>
-          <ul>
-            <li>Built a Random Forest framework to classify 3 surgical expertise levels from da Vinci robotic kinematic data using acceleration-based features.</li>
-            <li>Optimised generalisation on a small, class-imbalanced clinical dataset with Bayesian optimisation and 5-fold cross-validation.</li>
-            <li>Work accepted for an oral podium presentation at the Society of Robotic Surgery (SRS) 2025.</li>
-          </ul>
+  
+          <h3>Research Intern: Non-Bayesian Exoplanetary Atmospheric Foward Retrievals</h3>
+  
+          <p class="timeline-org">
+            Infrared Processing and Analysis Centre (IPAC), supervised by Nicholas Susemiehl
+          </p>
+  
+          <p class="timeline-desc">
+            Transfer Learning on flux spectra for forward retrieval of atmopsheric parameters, using posterior probability distributions.
+          </p>
         </div>
-
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-dates">Jun 2025 – Dec 2025</span>
-          </div>
-          <h3>Research Intern</h3>
-          <p class="timeline-org">IPAC at Caltech — Transfer Learning, Parametric Retrievals · Pasadena, California</p>
-          <ul>
-            <li>Designed a transfer-learning pipeline for atmospheric parameter prediction across 3,000,000+ exoplanet spectra.</li>
-            <li>Fine-tuned a pre-trained GAN (ExoGAN) for non-Bayesian forward retrieval, improving scalability over traditional Bayesian inference.</li>
-            <li>Evaluated neural networks across 10 planetary parameters using posterior distributions and density plots.</li>
-          </ul>
-        </div>
-
+  
       </div>
     </div>
   </section>
@@ -110,74 +120,26 @@
       <div class="section-head">
         <p class="eyebrow">Publications</p>
         <h2>Papers</h2>
-        <p>Filter by topic, or use the pills on each entry for the abstract and citation.</p>
+        <!-- <p><Fieldset></Fieldset></p> -->
       </div>
 
-      <div class="pub-filters">
+      <!-- <div class="pub-filters">
         <button class="pub-filter is-active" data-topic="all">All</button>
         <button class="pub-filter" data-topic="astro">Astrophysics</button>
         <button class="pub-filter" data-topic="ml">Machine Learning</button>
         <button class="pub-filter" data-topic="surgery">Robotic Surgery</button>
         <button class="pub-filter" data-topic="eng">Engineering</button>
-      </div>
+      </div> -->
 
       <ul class="pub-list">
-
-        <!-- 1 -->
-        <li class="pub-item" data-topics="astro ml">
-          <h3 class="pub-title">
-            <a href="https://astro.theoj.org/article/154054-detecting-false-positives-with-derived-planetary-parameters-experimenting-with-the-kepler-dataset" target="_blank" rel="noopener">
-              Detecting False Positives with Derived Planetary Parameters: Experimenting with the KEPLER Dataset
-            </a>
-          </h3>
-          <p class="pub-authors"><strong>Ayan Bin Rafaih</strong>, Zachary Murray</p>
-          <p class="pub-venue">The Open Journal of Astrophysics · 2025</p>
-
-          <div class="pill-row">
-            <a class="pill" href="https://astro.theoj.org/article/154054-detecting-false-positives-with-derived-planetary-parameters-experimenting-with-the-kepler-dataset" target="_blank" rel="noopener">PDF</a>
-            <a class="pill" href="https://doi.org/10.48550/arXiv.2508.13801" target="_blank" rel="noopener">arXiv</a>
-            <button class="pill" data-target="panel-1-abs" aria-expanded="false">Abstract</button>
-            <button class="pill" data-target="panel-1-bib" aria-expanded="false">BibTeX</button>
-            <span class="pill is-disabled">Poster — add link</span>
-          </div>
-
-          <div class="pub-panel" id="panel-1-abs">
-            <p>
-              Tests whether transit false-positive detection can rely on a handful of
-              <em>derived</em> planetary parameters — stellar radius, transit depth and
-              duration, odd–even depth comparison — instead of full light curves. Across
-              four classifiers (logistic regression, random forest, SVM, CNN), this
-              lighter feature set recovers roughly 90% of known false positives, with the
-              random forest and CNN giving the strongest accuracy / precision–recall
-              trade-off (87.8% and 92.2% validation accuracy respectively). Performance is
-              also broken down by the Kepler vetting flags: the stellar-eclipse flag is
-              easiest to classify, while centroid-offset and ephemeris-match flags are the
-              hardest.
-            </p>
-          </div>
-          <div class="pub-panel" id="panel-1-bib">
-            <pre>@article{rafaih2025kepler,
-  author  = {Bin Rafaih, Ayan and Murray, Zachary},
-  title   = {Detecting False Positives with Derived Planetary
-             Parameters: Experimenting with the KEPLER Dataset},
-  journal = {The Open Journal of Astrophysics},
-  year    = {2025},
-  url     = {https://astro.theoj.org/article/154054}
-}</pre>
-            <button class="pub-panel-copy">Copy</button>
-          </div>
-        </li>
-
-        <!-- 2 -->
         <li class="pub-item" data-topics="astro ml">
           <h3 class="pub-title">AstroThink: Can Large Language Models Reason Their Way Through Astrophysics Olympiad Problems?</h3>
           <p class="pub-authors"><strong>Ayan Bin Rafaih</strong>, Taner Shakir</p>
-          <p class="pub-venue">Under review, Artificial Intelligence Review · accepted for oral presentation, ICMLC 2026</p>
+          <p class="pub-venue">ICMLC 2026</p>
 
           <div class="pill-row">
-            <span class="pill is-disabled">Preprint — coming soon</span>
             <button class="pill" data-target="panel-2-abs" aria-expanded="false">Abstract</button>
-            <button class="pill" data-target="panel-2-bib" aria-expanded="false">BibTeX</button>
+            <!-- <button class="pill" data-target="panel-2-bib" aria-expanded="false">BibTeX</button> -->
           </div>
 
           <div class="pub-panel" id="panel-2-abs">
@@ -206,8 +168,48 @@
           </div>
         </li>
 
-        <!-- 3 -->
-        <li class="pub-item" data-topics="surgery">
+        
+        <!-- 1 -->
+        <li class="pub-item" data-topics="astro ml">
+          <h3 class="pub-title">
+            <a href="https://astro.theoj.org/article/154054-detecting-false-positives-with-derived-planetary-parameters-experimenting-with-the-kepler-dataset" target="_blank" rel="noopener">
+              Detecting False Positives with Derived Planetary Parameters: Experimenting with the KEPLER Dataset
+            </a>
+          </h3>
+          <p class="pub-authors"><strong>Ayan Bin Rafaih</strong>, Zachary Murray</p>
+          <p class="pub-venue">OJA 2025</p>
+
+          <div class="pill-row">
+            <!-- <a class="pill" href="https://astro.theoj.org/article/154054-detecting-false-positives-with-derived-planetary-parameters-experimenting-with-the-kepler-dataset" target="_blank" rel="noopener">PDF</a> -->
+            <a class="pill" href="https://doi.org/10.48550/arXiv.2508.13801" target="_blank" rel="noopener">arXiv</a>
+            <button class="pill" data-target="panel-1-abs" aria-expanded="false">Abstract</button>
+            <button class="pill" data-target="panel-1-bib" aria-expanded="false">BibTeX</button>
+          </div>
+
+          <div class="pub-panel" id="panel-1-abs">
+            <p>
+              Recent developments in computational power and machine learning techniques motivate their use in many different astrophysical research areas. Consequently, many machine learning models have been trained to classify exoplanet transit signals - typically done by using time series light curves. In this work, we attempt a different approach and try to improve the efficiency of these algorithms by fitting only derived planetary parameters, instead of full time-series light curves. We investigate and evaluate 4 models (Logistic Regression, Random Forest, Support Vector Machines, and Convolutional Neural Networks) on the KEPLER dataset, using precision-recall trade-off and accuracy metrics. We show that this approach can identify up to about 90% of false positives, implying the planetary parameters encompass most of the relevant information contained in a light curve. Random Forest and Convolutional Neural Networks produce the highest accuracy and the best precision-recall trade-off. We also note that the accuracies as a function of the stellar eclipse flag SS have the best performance.
+            </p>
+          </div>
+          <div class="pub-panel" id="panel-1-bib">
+            <pre>@article{Rafaih_2025,
+              title={Detecting False Positives With Derived Planetary Parameters: Experimenting with the KEPLER Dataset},
+              volume={8},
+              ISSN={2565-6120},
+              url={http://dx.doi.org/10.33232/001c.154054},
+              DOI={10.33232/001c.154054},
+              journal={The Open Journal of Astrophysics},
+              publisher={Maynooth University},
+              author={Rafaih, Ayan Bin and Murray, Zachary},
+              year={2025},
+              month=Dec }
+           </pre>
+            <button class="pub-panel-copy">Copy</button>
+          </div>
+        </li>
+
+        
+         <li class="pub-item" data-topics="surgery">
           <h3 class="pub-title">
             <a href="https://pubmed.ncbi.nlm.nih.gov/41209917/" target="_blank" rel="noopener">
               Sustainability in Surgery: Problems, Solutions, and Recommendations
@@ -247,7 +249,7 @@
           </div>
         </li>
 
-        <!-- 4 -->
+
         <li class="pub-item" data-topics="surgery">
           <h3 class="pub-title">
             <a href="https://pubmed.ncbi.nlm.nih.gov/40889021/" target="_blank" rel="noopener">
@@ -288,7 +290,6 @@
           </div>
         </li>
 
-        <!-- 5 -->
         <li class="pub-item" data-topics="surgery">
           <h3 class="pub-title">
             <a href="https://link.springer.com/article/10.1007/s11701-025-02573-1" target="_blank" rel="noopener">
@@ -328,7 +329,6 @@
           </div>
         </li>
 
-        <!-- 6 -->
         <li class="pub-item" data-topics="eng">
           <h3 class="pub-title">
             <a href="https://www.irjet.net/archives/V12/i7/IRJET-V12I725.pdf" target="_blank" rel="noopener">
@@ -365,9 +365,8 @@
 }</pre>
             <button class="pub-panel-copy">Copy</button>
           </div>
-        </li>
+        </li> 
 
-        <!-- 7 -->
         <li class="pub-item" data-topics="surgery">
           <h3 class="pub-title">
             <a href="https://fg.bmj.com/content/16/6/495.info" target="_blank" rel="noopener">
@@ -408,7 +407,6 @@
           </div>
         </li>
 
-        <!-- 8 -->
         <li class="pub-item" data-topics="eng">
           <h3 class="pub-title">
             <a href="https://www.irjet.net/archives/V12/i1/IRJET-V12I173.pdf" target="_blank" rel="noopener">
@@ -447,7 +445,6 @@
           </div>
         </li>
 
-        <!-- 9 -->
         <li class="pub-item" data-topics="surgery ml">
           <h3 class="pub-title">
             <a href="https://www.cureus.com/articles/319675-artificial-intelligence-driven-approaches-to-managing-surgeon-fatigue-and-improving-performance" target="_blank" rel="noopener">
@@ -488,7 +485,7 @@
 
       </ul>
     </div>
-  </section>
+  </section> -->
 
   <!-- ============================= PRESENTATIONS ============================= -->
   <section id="presentations">
@@ -503,29 +500,29 @@
           <div class="talk-year">2026</div>
           <div>
             <div class="talk-title">Detecting False Positives with Derived Planetary Parameters: Experimenting with the KEPLER Dataset</div>
-            <div class="talk-meta"><span class="talk-type">Oral Poster</span>247th Meeting of the American Astronomical Society (AAS) · Phoenix, Arizona</div>
+            <div class="talk-meta"><span class="talk-type">Poster</span>247th Meeting of the American Astronomical Society (AAS) · Phoenix, Arizona</div>
           </div>
         </li>
         <li class="talk-item">
           <div class="talk-year">2026</div>
           <div>
             <div class="talk-title">AstroThink: Can Large Language Models Reason Their Way Through Astrophysics Olympiad Problems?</div>
-            <div class="talk-meta"><span class="talk-type">Oral</span>18th International Conference on Machine Learning and Computing (ICMLC) · Nanjing, China</div>
+            <div class="talk-meta"><span class="talk-type">Oral Poster</span>18th International Conference on Machine Learning and Computing (ICMLC) · Nanjing, China</div>
           </div>
         </li>
         <li class="talk-item">
           <div class="talk-year">2025</div>
           <div>
             <div class="talk-title">BOB-RFM: Robotic Surgical Skills Classification Using Bayesian-Optimisation Based Random Forests</div>
-            <div class="talk-meta"><span class="talk-type">Oral Podium</span>Society of Robotic Surgery Annual Meeting · Strasbourg, France — one of the only high-school researchers to present orally that year</div>
+            <div class="talk-meta"><span class="talk-type">Oral Podium</span>Society of Robotic Surgery Annual Meeting · Strasbourg, France</div>
           </div>
         </li>
-        <li class="talk-item">
+         <li class="talk-item">
           <div class="talk-year">2025</div>
           <div>
             <div class="talk-title">Robotic Beyond Total Mesorectal Excision for Locally Advanced and Recurrent Anorectal Cancer — A Systematic Review</div>
             <div class="talk-meta"><span class="talk-type">Poster</span>European Society of Coloproctology 20th Annual Meeting (Tripartite Colorectal Meeting) · Paris, France</div>
-          </div>
+          </div> 
         </li>
         <li class="talk-item">
           <div class="talk-year">2024</div>
@@ -534,13 +531,13 @@
             <div class="talk-meta"><span class="talk-type">Oral Poster</span>New York Academy of Sciences (NYAS) 15th Machine Learning Symposium · New York, USA</div>
           </div>
         </li>
-        <li class="talk-item">
+         <li class="talk-item">
           <div class="talk-year">2024</div>
           <div>
             <div class="talk-title">Using KNN and Naïve Bayes as Probabilistic Methods to Detect Exoplanets, with Isolation Forest for Contamination Detection</div>
             <div class="talk-meta"><span class="talk-type">Poster</span>Izmir International Science and Engineering Fair (IISEF) · Izmir, Turkey</div>
           </div>
-        </li>
+        </li> 
       </ul>
     </div>
   </section>
@@ -549,12 +546,28 @@
 
 <footer class="site-footer">
   <div class="footer-wrap">
-    <p>© 2026 Ayan Bin Rafaih.</p>
-    <div class="social-row">
-      <a href="mailto:ayanbrafaih@gmail.com">Email</a>
-      <a href="https://github.com/ayanbinrafaih" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/ayanbinrafaih" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://scholar.google.com/citations?user=3FV8oHsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+    <p>© 2026 Ayan Bin Rafaih. Last updated June 2026.</p>
+    <div class="icon-row">
+      <button type="button" class="icon-btn" id="email-copy" data-email="ayanbrafaih@gmail.com" aria-label="Copy email address">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
+        <span class="icon-tooltip">Click to copy</span>
+      </button>
+  
+      <a class="icon-btn" href="https://x.com/ayanbinrafaih" target="_blank" rel="noopener" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3l8.06 9.67L3.4 21h2.27l6.6-7.34L17.6 21H21l-8.46-10.1L20.2 3h-2.27l-6.06 6.74L6.4 3H3z"></path></svg>
+      </a>
+  
+      <a class="icon-btn" href="https://github.com/ayanbinrafaih" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .98-.31 3.2 1.19a11.1 11.1 0 015.83 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.7.42.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .3.2.66.79.55A10.52 10.52 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"></path></svg>
+      </a>
+  
+      <a class="icon-btn" href="https://www.linkedin.com/in/ayanbinrafaih" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg>
+      </a>
+  
+      <a class="icon-btn" href="https://scholar.google.com/citations?user=3FV8oHsAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5L2 9z"></path><path d="M6 11v5c0 1.5 2.5 3 6 3s6-1.5 6-3v-5"></path></svg>
+      </a>
     </div>
   </div>
 </footer>
