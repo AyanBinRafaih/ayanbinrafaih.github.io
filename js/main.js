@@ -1,8 +1,3 @@
-// =========================================================
-// Ayan Bin Rafaih — site scripts
-// Shared across index.html / research.html / projects.html
-// =========================================================
-
 document.addEventListener("DOMContentLoaded", function () {
   initNavToggle();
   initScrollSpy();
@@ -12,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
   initEmailCopy();
 });
 
-/* ---------- Mobile nav ---------- */
 function initNavToggle() {
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("site-nav");
@@ -57,7 +51,6 @@ function initEmailCopy() {
   });
 }
 
-/* ---------- Active nav highlight on index.html sections ---------- */
 function initScrollSpy() {
   var sections = document.querySelectorAll("main section[id]");
   var navLinks = document.querySelectorAll(".site-nav a[data-nav]");
@@ -84,7 +77,6 @@ function initScrollSpy() {
   sections.forEach(function (s) { observer.observe(s); });
 }
 
-/* ---------- Abstract / BibTeX toggle panels ---------- */
 function initPubPanels() {
   document.querySelectorAll(".pill[data-target]").forEach(function (btn) {
     btn.addEventListener("click", function () {
@@ -96,7 +88,6 @@ function initPubPanels() {
   });
 }
 
-/* ---------- Copy BibTeX to clipboard ---------- */
 function initCopyButtons() {
   document.querySelectorAll(".pub-panel-copy").forEach(function (btn) {
     btn.addEventListener("click", function () {
@@ -124,17 +115,16 @@ function fallbackCopy(text, cb) {
   ta.style.opacity = "0";
   document.body.appendChild(ta);
   ta.select();
-  try { document.execCommand("copy"); } catch (e) { /* no-op */ }
+  try { document.execCommand("copy"); } catch (e) {  }
   document.body.removeChild(ta);
   if (cb) cb();
 }
 
-/* ---------- Publication topic filters (research.html) ---------- */
 function initPubFilters() {
   var filterBar = document.querySelector(".pub-filters");
   if (!filterBar) return;
   var buttons = filterBar.querySelectorAll(".pub-filter");
-  var items = document.querySelectorAll(".pub-item");
+  var items = document.querySelectorAll(".pub-item, .talk-item");
 
   buttons.forEach(function (btn) {
     btn.addEventListener("click", function () {
@@ -143,7 +133,8 @@ function initPubFilters() {
       var topic = btn.getAttribute("data-topic");
 
       items.forEach(function (item) {
-        if (topic === "all" || item.getAttribute("data-topics").indexOf(topic) !== -1) {
+        var topics = item.getAttribute("data-topics") || "";
+        if (topic === "all" || topics.indexOf(topic) !== -1) {
           item.style.display = "";
         } else {
           item.style.display = "none";
@@ -152,3 +143,28 @@ function initPubFilters() {
     });
   });
 }
+
+const filters = document.querySelectorAll('.pub-filter');
+const projects = document.querySelectorAll('.project-card');
+
+filters.forEach(filter => {
+    filter.addEventListener('click', () => {
+
+        filters.forEach(f => f.classList.remove('is-active'));
+        filter.classList.add('is-active');
+
+        const topic = filter.dataset.filter;
+
+        projects.forEach(project => {
+
+            if (
+                topic === 'all' ||
+                project.dataset.topics.includes(topic)
+            ) {
+                project.style.display = '';
+            } else {
+                project.style.display = 'none';
+            }
+        });
+    });
+});

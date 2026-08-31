@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=18">
 </head>
 <body>
 
@@ -22,144 +22,307 @@
     </button>
     <nav class="site-nav" id="site-nav">
       <a href="index.html#home">Home</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#awards">Awards &amp; Honours</a>
+      <a href="experience.html">Industry</a>
       <a href="research.html">Research</a>
       <a href="projects.html" class="is-active">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="presentations.html">Presentations</a>
+      <a href="leadership.html">Leadership</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-  <div class="section-inner page-header">
-    <h1>Projects</h1>
-    <p>Systems and software projects — mostly distributed systems, low-latency engineering,
-       and applied machine learning, built outside of formal research work.</p>
+    <div class="section-inner page-header">
+      <h1>Projects</h1>
+      <p>Updated September 2026</p>
+    </div>
+
+<section>
+  <div class="section-inner">
+
+    <div class="pub-filters">
+      <button class="pub-filter is-active" data-filter="all">All</button>
+
+      <button class="pub-filter" data-filter="DistributedSystems">Distributed Systems</button>
+      <button class="pub-filter" data-filter="SystemsProgramming">Systems Programming</button>
+      <button class="pub-filter" data-filter="PerformanceEngineering">Performance Engineering</button>
+      <button class="pub-filter" data-filter="Concurrency">Concurrency</button>
+      <button class="pub-filter" data-filter="CloudInfrastructure">Cloud &amp; Infrastructure</button>
+      <button class="pub-filter" data-filter="MLSystems">ML Systems</button>
+      <button class="pub-filter" data-filter="MobileComputing">Mobile Computing</button>
+      <button class="pub-filter" data-filter="HCI">HCI</button>
+
+      <button class="pub-filter" data-filter="Python">Python</button>
+      <button class="pub-filter" data-filter="TypeScript">TypeScript</button>
+      <button class="pub-filter" data-filter="CPP">C++</button>
+      <button class="pub-filter" data-filter="Java">Java</button>
+
+      <button class="pub-filter" data-filter="PostgreSQL">PostgreSQL</button>
+      <button class="pub-filter" data-filter="Kafka">Apache Kafka</button>
+      <button class="pub-filter" data-filter="Docker">Docker</button>
+      <button class="pub-filter" data-filter="Kubernetes">Kubernetes</button>
+      <button class="pub-filter" data-filter="CMake">CMake</button>
+      <button class="pub-filter" data-filter="GoogleTest">GoogleTest</button>
+      <button class="pub-filter" data-filter="GoogleBenchmark">Google Benchmark</button>
+      <button class="pub-filter" data-filter="libcurl">libcurl</button>
+      <button class="pub-filter" data-filter="ThriftRPC">Thrift RPC</button>
+      <button class="pub-filter" data-filter="Jaeger">Jaeger</button>
+      <button class="pub-filter" data-filter="RabbitMQ">RabbitMQ</button>
+      <button class="pub-filter" data-filter="Firebase">Firebase</button>
+      <button class="pub-filter" data-filter="Android">Android</button>
+    </div>
+
   </div>
+</section>
 
   <section>
-    <div class="section-inner section-inner--wide">
-      <div class="project-grid">
+  <div class="section-inner section-inner--projects">
 
-        <!-- AgentFlock -->
-        <article class="project-card">
-          <div class="project-head">
-            <h3>AgentFlock</h3>
-            <span class="project-status">Active</span>
-          </div>
-          <ul class="tag-list">
-            <li>Python</li><li>TypeScript</li><li>PostgreSQL</li>
-            <li>Apache Kafka</li><li>Docker</li><li>Kubernetes</li>
-          </ul>
-          <ul class="bullets">
-            <li>Distributed multi-agent platform with 6 independently deployable microservices: an API gateway, an orchestrator, and 4 specialised agents (planning, research, writing, review) communicating asynchronously over an Apache Kafka event bus with full event sourcing.</li>
-            <li>DAG-based task scheduler in the orchestrator uses an LLM (Groq Llama 3.3 70B) to decompose research tasks into dependent subtasks, dispatching agents dynamically as soon as their dependencies resolve.</li>
-            <li>Deployed to a 10-pod Kubernetes cluster with GitHub Actions CI/CD (lint / test / build on every push) and a React dashboard for real-time task tracking and PDF report generation.</li>
-          </ul>
-          <div class="pill-row">
-            <!-- TODO: replace # with your repo / demo links -->
-            <a class="pill" href="#">Code</a>
-            <a class="pill" href="#">Demo</a>
-          </div>
-        </article>
+    <div class="project-grid">
 
-        <!-- Limit Order Book -->
-        <article class="project-card">
-          <div class="project-head">
-            <h3>Limit Order Book (LOB)</h3>
-            <span class="project-status">In progress</span>
-          </div>
-          <ul class="tag-list">
-            <li>C++20</li><li>CMake</li><li>GoogleTest</li><li>Google Benchmark</li><li>GitHub Actions</li>
-          </ul>
-          <ul class="bullets">
-            <li>Limit order book matching engine built from scratch in C++20: price-time priority matching, multi-level execution, partial fills, and O(1) cancellation via iterator-indexed order lookups.</li>
-            <li>Low-latency features including cache-line-aligned order representations, RDTSC-based timestamping, LFENCE serialisation, and runtime cycle-to-nanosecond calibration.</li>
-            <li>11 unit tests covering correct matching, quantity conservation, cancellation, and partial fills.</li>
-            <li>Currently building a lock-free SPSC ring buffer and per-operation latency-distribution analysis (tail latencies, distribution fits).</li>
-          </ul>
-          <div class="pill-row">
-            <!-- TODO: replace # with your repo link -->
-            <a class="pill" href="#">Code</a>
-          </div>
-        </article>
+      <article class="project-card"
+         data-topics="DistributedSystems PerformanceEngineering Concurrency CloudInfrastructure MLSystems Python TypeScript PostgreSQL Kafka Docker Kubernetes">
+      <div class="project-body">
+        <div class="project-main">
+        <div class="project-head">
+          <h3>AgentFlock</h3>
+          <span class="project-status">2026</span>
+        </div>
 
-        <!-- VibeServe Expansion -->
-        <article class="project-card">
-          <div class="project-head">
-            <h3>VibeServe Expansion</h3>
-            <span class="project-status">Complete</span>
-          </div>
-          <ul class="tag-list">
-            <li>C++17</li><li>libcurl</li><li>Thrift RPC</li><li>Docker</li><li>Jaeger</li><li>RabbitMQ</li>
-          </ul>
-          <ul class="bullets">
-            <li>Correctness and performance testing harness for DeathStarBench's 13-microservice social network, with 13 checks covering write-visibility, asynchronous fan-out, atomicity, and concurrency safety across Thrift-backed services.</li>
-            <li>Open-loop benchmark (token-bucket dispatcher + worker pool) sustaining up to 1,000 requests/sec, computing p50 / p90 / p99 / p99.9 latency end-to-end and per-service via Jaeger distributed traces.</li>
-            <li>5 test-isolated nginx/Lua endpoints verifying application state through the Thrift service layer, surfacing an async-consistency window in Redis-based timeline fan-out via RabbitMQ.</li>
-          </ul>
-          <div class="pill-row">
-            <!-- TODO: replace # with your repo link -->
-            <a class="pill" href="#">Code</a>
-          </div>
-        </article>
+        <ul class="tag-list">
+          <li>Python</li>
+          <li>TypeScript</li>
+          <li>PostgreSQL</li>
+          <li>Apache Kafka</li>
+          <li>Docker</li>
+          <li>Kubernetes</li>
+        </ul>
 
-        <!-- MeriZubaan -->
-        <article class="project-card">
-          <div class="project-head">
-            <h3>MeriZubaan</h3>
-            <span class="project-status">Complete</span>
-          </div>
-          <ul class="tag-list">
-            <li>Java</li><li>Python</li><li>Firebase Realtime DB</li><li>Android</li>
-          </ul>
-          <ul class="bullets">
-            <li>Full-stack Android app for learning Urdu, with a Java backend on Firebase Realtime Database, user authentication, and spaced-repetition progress tracking.</li>
-            <li>Curated a dataset of 10,000+ Urdu phrases with phonetic annotations and native-dialect audio recordings.</li>
-            <li>Ran structured beta testing with 15+ users.</li>
-          </ul>
-          <div class="pill-row">
-            <!-- TODO: replace # with your repo / demo links -->
-            <a class="pill" href="#">Code</a>
-            <a class="pill" href="#">Demo</a>
-          </div>
-        </article>
+        <p class="timeline-summary">
+          Event-sourced multi-agent orchestration platform for dependency-aware autonomous research workflows.
+      </p>
+
+
+        <div class="project-desc">
+          <p>Multi-agent systems need to coordinate heterogeneous agents while preserving task dependencies and state across distributed execution. AgentFlock implements this as a distributed agent platform in which an API gateway accepts complex tasks, an LLM-based orchestrator decomposes them into subtasks, and specialized research, writing, review, and planning agents execute them as dependencies become available. The services communicate asynchronously through Apache Kafka, with PostgreSQL storing tasks, subtasks, events, and agent results, while Redis provides shared caching and rate limiting. A DAG scheduler tracks completed dependencies and dispatches newly unblocked work, allowing independent subtasks to execute concurrently while dependent stages wait for their required results. The system is packaged as six containerized services with Kubernetes deployment support and includes a React dashboard, Kafka monitoring, Prometheus metrics, and Grafana dashboards for inspecting workflow state and execution history.</p>
+        </div>
+
+      <div class="pill-row">
+
+          <a class="pill"
+   href="https://github.com/ayanbinrafaih/AgentFlock"
+   target="_blank"
+   rel="noopener noreferrer">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+    Code
+</a>
+      </div>
+
+        </div>
+
+        <figure class="project-figure">
+          <a href="assets/img/projects/agentflock.png" target="_blank" rel="noopener">
+            <img src="assets/img/projects/agentflock.png" alt="AgentFlock architecture: API gateway and LLM orchestrator dispatching four specialised agents over a Kafka event bus." loading="lazy">
+          </a>
+        </figure>
+      </div>
+      </article>
+
+      <article class="project-card"
+         data-topics="SystemsProgramming PerformanceEngineering Concurrency CPP CMake GoogleTest GoogleBenchmark">
+      <div class="project-body">
+        <div class="project-main">
+        <div class="project-head">
+          <h3>Limit Order Book Matching Engine</h3>
+          <span class="project-status">2026</span>
+        </div>
+
+        <ul class="tag-list">
+          <li>C++20</li>
+          <li>CMake</li>
+          <li>GoogleTest</li>
+          <li>Google Benchmark</li>
+          <li>GitHub Actions</li>
+        </ul>
+
+        <p class="timeline-summary">
+          Low-latency exchange matching engine using cache-efficient techniques and statistical analysis of latency distributions.
+      </p>
+
+
+        <div class="project-desc">
+          <p>Low-latency trading systems require an order book that can maintain market semantics while keeping the matching path predictable and 
+            minimizing synchronization overhead. This project implements a C++20 limit order book and matching engine with price-time priority, 
+            multi-level matching, full and partial fills, remainder handling, and iterator-based order lookup for fast cancellation. Price levels 
+            are maintained with ordered maps, orders at each level use FIFO lists, and an order-ID index maps directly to stored iterators. 
+            The matching engine includes a lock-free single-producer single-consumer queue and a single-threaded execution path, with cache-line-aligned 
+            order storage and a CMake build configured for native optimization. Latency is measured using RDTSC with LFENCE serialization and calibration 
+            against CLOCK_MONOTONIC_RAW, while we use Google Benchmark unit tests, and statistical distribution analysis (Python) to characterise the 
+            effects of the implementation choices and trade-offs made.</p>
+        </div>
+
+      <div class="pill-row">
+
+          <a class="pill"
+   href="https://github.com/AyanBinRafaih/orderbook"
+   target="_blank"
+   rel="noopener noreferrer">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+    Code
+</a>
 
       </div>
+
+        </div>
+
+        <figure class="project-figure">
+          <a href="assets/img/projects/orderbook.png" target="_blank" rel="noopener">
+            <img src="assets/img/projects/orderbook.png" alt="Order book architecture: a lock-free SPSC queue feeding a single-threaded matching engine over price-ordered bid and ask levels." loading="lazy">
+          </a>
+        </figure>
+      </div>
+      </article>
+
+      <article class="project-card"
+         data-topics="DistributedSystems SystemsProgramming PerformanceEngineering Concurrency CloudInfrastructure CPP Docker libcurl ThriftRPC Jaeger RabbitMQ">
+      <div class="project-body">
+        <div class="project-main">
+        <div class="project-head">
+          <h3>VibeSys</h3>
+          <span class="project-status">2026</span>
+        </div>
+
+        <ul class="tag-list">
+          <li>C++17</li>
+          <li>libcurl</li>
+          <li>Thrift RPC</li>
+          <li>Docker</li>
+          <li>Jaeger</li>
+          <li>RabbitMQ</li>
+        </ul>
+
+        <p class="timeline-summary">
+          Agentic loops for bespoke domain-specific serving systems, with a terminal user interface and a correctness and benchmark harness.
+      </p>
+
+
+        <div class="project-desc">
+          <p>General-purpose systems are designed to serve a broad range of workloads, but the best implementation can depend heavily on the application requirements, 
+            workload, model, and hardware. VibeSys explores whether AI agents can instead generate and optimize bespoke systems for a specific target, using an iterative 
+            search process in which agents propose implementation changes, test them against target-specific correctness requirements, profile performance, and retain 
+            validated results in Git-backed experiment history. VibeServe is the first substantial systems project built around this approach, applying the framework to 
+            LLM serving across different workloads and hardware targets. Work on the project includes the interactive terminal interface used to inspect 
+            long agentic runs, with hypothesis logs, per-round agent traces, experiment chat, graph views of hypotheses and actions, and performance dashboards. 
+            The evaluation infrastructure was also extended with correctness and performance harnesses for DeathStarBench social-network microservice, 
+            including distributed consistency checks, open-loop load generation and end-to-end latency decomposition using Jaeger tracing (parent servers and intermediate hop-servers).</p>
+        </div>
+
+      <div class="pill-row">
+
+          <a class="pill"
+   href="https://github.com/uw-syfi/vibe-serve"
+   target="_blank"
+   rel="noopener noreferrer">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+    Code
+</a>
+
+      </div>
+
+        </div>
+
+        <figure class="project-figure">
+          <a href="assets/img/projects/vibesys.png" target="_blank" rel="noopener">
+            <img src="assets/img/projects/vibesys.png" alt="VibeSys: one bespoke serving system generated per workload, model and hardware target, in place of a single generic framework." loading="lazy">
+          </a>
+          <figcaption class="figure-credit">
+            Credits
+            <a href="https://arxiv.org/abs/2605.06068" target="_blank" rel="noopener"><svg width="11" height="14" viewBox="85.5 -1 86 113.5" aria-hidden="true" focusable="false"><path d="M127.98,55.61l-32.74,38.85c-1.29,1.37-2.08,3.78-1.36,5.5.75,1.8,2.46,2.91,4.4,2.91,1.09,0,1.99-.38,3.16-1.56l40.19-42.71c1.6-1.69,1.62-4.33.04-6.04l-13.68,3.05Z" fill="#aa142d"></path><path d="M127.98,55.61l31.19-38.27c1.49-1.99,2.2-3.03,1.49-4.72-.74-1.77-2.59-3.16-4.48-3.16h0c-1.06,0-1.72.09-3.01,1.11l-38.63,41.76c-1.72,1.84-1.71,4.7.02,6.53l47.79,51.07c1.02,1.05,2.05,1.19,3.14,1.19,1.93,0,3.19-1.14,4.03-2.82.72-1.73-.08-3.44-1.4-5.23l-40.12-47.46" fill="#afa497"></path><path d="M141.67,52.56L95,2.13S93.29.04,91.48,0s-3.6,1.02-4.34,2.79c-.7,1.69-.2,2.88,1.35,5.1l40.09,48.42" fill="#aa142d"></path></svg>VibeServe</a>
+          </figcaption>
+        </figure>
+      </div>
+      </article>
+
+      <article class="project-card"
+         data-topics="MobileComputing HCI MLSystems Java Python Firebase Android">
+      <div class="project-body">
+        <div class="project-main">
+        <div class="project-head">
+          <h3>MeriZubaan</h3>
+          <span class="project-status">2025</span>
+        </div>
+
+        <ul class="tag-list">
+          <li>Java</li>
+          <li>Python</li>
+          <li>Firebase</li>
+          <li>Android</li>
+        </ul>
+
+        <p class="timeline-summary">
+          Full-stack Android language learning platform with adaptive vocabulary acquisition.
+      </p>
+
+
+        <div class="project-desc">
+          <p>Language-learning software often relies on generic vocabulary and review workflows that do not capture the linguistic structure or pronunciation
+             needs of a specific language. This Android platform implements an Urdu language acquisition system with authentication, cloud-synchronized learner 
+             progress, weekly quizzes and adaptive spaced-repetition workflows for managing practice over time. A corpus of more than 10,000 Urdu language samples was designed
+              and curated with phonetic annotations and native-speaker pronunciation recordings as the main dataset. The system was evaluated through structured user studies, 
+              to iteratively refine the platform through the feedback.
+            </p>
+        </div>
+
+      <div class="pill-row">
+
+      </div>
+
+        </div>
+      </div>
+      </article>
+
     </div>
-  </section>
+
+  </div>
+</section>
 
 </main>
 
 <footer class="site-footer">
   <div class="footer-wrap">
-    <p>© 2026 Ayan Bin Rafaih. Last updated June 2026.</p>
-    <div class="icon-row">
-      <button type="button" class="icon-btn" id="email-copy" data-email="ayanbrafaih@gmail.com" aria-label="Copy email address">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
+    <p>© 2026 Ayan Bin Rafaih. Last updated September 2026.</p>
+    <div class="link-list">
+      <button type="button" class="link-item link-item--email" id="email-copy" data-email="ayanbrafaih@gmail.com" aria-label="Copy email address">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"></path></svg>
+        <span class="link-label">Email</span>
         <span class="icon-tooltip">Click to copy</span>
       </button>
-  
-      <a class="icon-btn" href="https://x.com/ayanbinrafaih" target="_blank" rel="noopener" aria-label="X (Twitter)">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3l8.06 9.67L3.4 21h2.27l6.6-7.34L17.6 21H21l-8.46-10.1L20.2 3h-2.27l-6.06 6.74L6.4 3H3z"></path></svg>
+
+      <a class="link-item link-item--x" href="https://x.com/ayanbinrafaih" target="_blank" rel="noopener" aria-label="X (Twitter)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.933zm-1.291 19.49h2.039L6.486 3.24H4.298l13.312 17.403z"></path></svg>
+        <span class="link-label">X</span>
       </a>
-  
-      <a class="icon-btn" href="https://github.com/ayanbinrafaih" target="_blank" rel="noopener" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .98-.31 3.2 1.19a11.1 11.1 0 015.83 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.7.42.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .3.2.66.79.55A10.52 10.52 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"></path></svg>
+
+      <a class="link-item link-item--github" href="https://github.com/ayanbinrafaih" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+        <span class="link-label">GitHub</span>
       </a>
-  
-      <a class="icon-btn" href="https://www.linkedin.com/in/ayanbinrafaih" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg>
+
+      <a class="link-item link-item--linkedin" href="https://www.linkedin.com/in/ayanbinrafaih" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+        <span class="link-label">LinkedIn</span>
       </a>
-  
-      <a class="icon-btn" href="https://scholar.google.com/citations?user=3FV8oHsAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5L2 9z"></path><path d="M6 11v5c0 1.5 2.5 3 6 3s6-1.5 6-3v-5"></path></svg>
+
+      <a class="link-item link-item--scholar" href="https://scholar.google.com/citations?user=3FV8oHsAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"></path></svg>
+        <span class="link-label">Google Scholar</span>
       </a>
     </div>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=2"></script>
 </body>
 </html>
