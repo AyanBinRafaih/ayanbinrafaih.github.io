@@ -1,3 +1,1 @@
-# ayanbinrafaih.github.io
-
-Personal academic website
+# Personal academic website
