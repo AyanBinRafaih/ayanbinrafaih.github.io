@@ -2,3 +2,8 @@ tools/
 
 .DS_Store
 **/.DS_Store
+
+# Blogs feature — not ready to publish yet, keep local only
+blogs.html
+blog-orderbook.html
+assets/img/blog/
