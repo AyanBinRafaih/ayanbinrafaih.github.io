@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initScrollSpy();
   initPubPanels();
   initCopyButtons();
-  initPubFilters();
+  initFilters();
   initEmailCopy();
 });
 
@@ -120,51 +120,28 @@ function fallbackCopy(text, cb) {
   if (cb) cb();
 }
 
-function initPubFilters() {
-  var filterBar = document.querySelector(".pub-filters");
-  if (!filterBar) return;
-  var buttons = filterBar.querySelectorAll(".pub-filter");
-  var items = document.querySelectorAll(".pub-item, .talk-item");
+function initFilters() {
+  var bar = document.querySelector(".pub-filters");
+  if (!bar) return;
+  var buttons = bar.querySelectorAll(".pub-filter");
+  var items = document.querySelectorAll(".pub-item, .talk-item, .project-card");
+
+  // Whole-token match: "Go" must not match "GoogleTest", "Java" must not match "JavaScript".
+  function matches(item, topic) {
+    if (topic === "all") return true;
+    var topics = (item.getAttribute("data-topics") || "").split(/\s+/);
+    return topics.indexOf(topic) !== -1;
+  }
 
   buttons.forEach(function (btn) {
     btn.addEventListener("click", function () {
+      // projects.html buttons carry data-filter; publications/presentations use data-topic
+      var topic = btn.getAttribute("data-filter") || btn.getAttribute("data-topic");
       buttons.forEach(function (b) { b.classList.remove("is-active"); });
       btn.classList.add("is-active");
-      var topic = btn.getAttribute("data-topic");
-
       items.forEach(function (item) {
-        var topics = item.getAttribute("data-topics") || "";
-        if (topic === "all" || topics.indexOf(topic) !== -1) {
-          item.style.display = "";
-        } else {
-          item.style.display = "none";
-        }
+        item.style.display = matches(item, topic) ? "" : "none";
       });
     });
   });
 }
-
-const filters = document.querySelectorAll('.pub-filter');
-const projects = document.querySelectorAll('.project-card');
-
-filters.forEach(filter => {
-    filter.addEventListener('click', () => {
-
-        filters.forEach(f => f.classList.remove('is-active'));
-        filter.classList.add('is-active');
-
-        const topic = filter.dataset.filter;
-
-        projects.forEach(project => {
-
-            if (
-                topic === 'all' ||
-                project.dataset.topics.includes(topic)
-            ) {
-                project.style.display = '';
-            } else {
-                project.style.display = 'none';
-            }
-        });
-    });
-});

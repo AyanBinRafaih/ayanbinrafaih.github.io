@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css?v=24">
+<link rel="stylesheet" href="css/style.css?v=25">
 </head>
 <body>
 
@@ -42,38 +42,65 @@
 <section>
   <div class="section-inner">
 
-    <div class="pub-filters">
-      <button class="pub-filter is-active" data-filter="all">All</button>
+    <div class="pub-filters pub-filters--grouped">
+      <div class="filter-group" role="group" aria-label="Topic">
+        <span class="filter-group-label">Topic</span>
+        <div class="filter-group-buttons">
+          <button class="pub-filter is-active" data-filter="all">All</button>
+          <button class="pub-filter" data-filter="DistributedSystems">Distributed Systems</button>
+          <button class="pub-filter" data-filter="SystemsProgramming">Systems Programming</button>
+          <button class="pub-filter" data-filter="PerformanceEngineering">Performance Engineering</button>
+          <button class="pub-filter" data-filter="Concurrency">Concurrency</button>
+          <button class="pub-filter" data-filter="CloudInfrastructure">Cloud &amp; Infrastructure</button>
+          <button class="pub-filter" data-filter="MLSystems">ML Systems</button>
+          <button class="pub-filter" data-filter="LLMSystems">LLM Systems</button>
+          <button class="pub-filter" data-filter="AgenticAI">Agentic AI</button>
+          <button class="pub-filter" data-filter="MobileComputing">Mobile Computing</button>
+          <button class="pub-filter" data-filter="HCI">HCI</button>
+        </div>
+      </div>
 
-      <button class="pub-filter" data-filter="DistributedSystems">Distributed Systems</button>
-      <button class="pub-filter" data-filter="SystemsProgramming">Systems Programming</button>
-      <button class="pub-filter" data-filter="PerformanceEngineering">Performance Engineering</button>
-      <button class="pub-filter" data-filter="Concurrency">Concurrency</button>
-      <button class="pub-filter" data-filter="CloudInfrastructure">Cloud &amp; Infrastructure</button>
-      <button class="pub-filter" data-filter="MLSystems">ML Systems</button>
-      <button class="pub-filter" data-filter="MobileComputing">Mobile Computing</button>
-      <button class="pub-filter" data-filter="HCI">HCI</button>
+      <div class="filter-group" role="group" aria-label="Language">
+        <span class="filter-group-label">Language</span>
+        <div class="filter-group-buttons">
+          <button class="pub-filter" data-filter="Python">Python</button>
+          <button class="pub-filter" data-filter="TypeScript">TypeScript</button>
+          <button class="pub-filter" data-filter="CPP">C++</button>
+          <button class="pub-filter" data-filter="Java">Java</button>
+          <button class="pub-filter" data-filter="Lua">Lua</button>
+          <button class="pub-filter" data-filter="Bash">Bash</button>
+        </div>
+      </div>
 
-      <button class="pub-filter" data-filter="Python">Python</button>
-      <button class="pub-filter" data-filter="TypeScript">TypeScript</button>
-      <button class="pub-filter" data-filter="CPP">C++</button>
-      <button class="pub-filter" data-filter="Java">Java</button>
-
-      <button class="pub-filter" data-filter="PostgreSQL">PostgreSQL</button>
-      <button class="pub-filter" data-filter="Kafka">Apache Kafka</button>
-      <button class="pub-filter" data-filter="Docker">Docker</button>
-      <button class="pub-filter" data-filter="Kubernetes">Kubernetes</button>
-      <button class="pub-filter" data-filter="Numba">Numba</button>
-      <button class="pub-filter" data-filter="PyTorch">PyTorch</button>
-      <button class="pub-filter" data-filter="CMake">CMake</button>
-      <button class="pub-filter" data-filter="GoogleTest">GoogleTest</button>
-      <button class="pub-filter" data-filter="GoogleBenchmark">Google Benchmark</button>
-      <button class="pub-filter" data-filter="libcurl">libcurl</button>
-      <button class="pub-filter" data-filter="ThriftRPC">Thrift RPC</button>
-      <button class="pub-filter" data-filter="Jaeger">Jaeger</button>
-      <button class="pub-filter" data-filter="RabbitMQ">RabbitMQ</button>
-      <button class="pub-filter" data-filter="Firebase">Firebase</button>
-      <button class="pub-filter" data-filter="Android">Android</button>
+      <div class="filter-group" role="group" aria-label="Tools">
+        <span class="filter-group-label">Tools</span>
+        <div class="filter-group-buttons">
+          <button class="pub-filter" data-filter="PostgreSQL">PostgreSQL</button>
+          <button class="pub-filter" data-filter="Redis">Redis</button>
+          <button class="pub-filter" data-filter="Kafka">Apache Kafka</button>
+          <button class="pub-filter" data-filter="RabbitMQ">RabbitMQ</button>
+          <button class="pub-filter" data-filter="Firebase">Firebase</button>
+          <button class="pub-filter" data-filter="Docker">Docker</button>
+          <button class="pub-filter" data-filter="Kubernetes">Kubernetes</button>
+          <button class="pub-filter" data-filter="GitHubActions">GitHub Actions</button>
+          <button class="pub-filter" data-filter="Jaeger">Jaeger</button>
+          <button class="pub-filter" data-filter="Prometheus">Prometheus</button>
+          <button class="pub-filter" data-filter="Grafana">Grafana</button>
+          <button class="pub-filter" data-filter="Numba">Numba</button>
+          <button class="pub-filter" data-filter="NumPy">NumPy</button>
+          <button class="pub-filter" data-filter="PyTorch">PyTorch</button>
+          <button class="pub-filter" data-filter="PythonChess">python-chess</button>
+          <button class="pub-filter" data-filter="React">React</button>
+          <button class="pub-filter" data-filter="Nginx">nginx</button>
+          <button class="pub-filter" data-filter="libcurl">libcurl</button>
+          <button class="pub-filter" data-filter="ThriftRPC">Thrift RPC</button>
+          <button class="pub-filter" data-filter="CMake">CMake</button>
+          <button class="pub-filter" data-filter="GoogleTest">GoogleTest</button>
+          <button class="pub-filter" data-filter="GoogleBenchmark">Google Benchmark</button>
+          <button class="pub-filter" data-filter="DeathStarBench">DeathStarBench</button>
+          <button class="pub-filter" data-filter="Android">Android</button>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -85,7 +112,7 @@
     <div class="project-grid">
 
       <article class="project-card project-card--footnoted"
-         data-topics="PerformanceEngineering MLSystems Python Numba PyTorch">
+         data-topics="PerformanceEngineering MLSystems Python Numba PyTorch NumPy GitHubActions PythonChess Bash">
       <div class="project-body">
         <div class="project-main">
         <div class="project-head">
@@ -95,9 +122,12 @@
 
         <ul class="tag-list">
           <li>Python</li>
+          <li>Bash</li>
           <li>Numba</li>
           <li>NumPy</li>
           <li>PyTorch</li>
+          <li>python-chess</li>
+          <li>GitHub Actions</li>
         </ul>
 
         <p class="timeline-summary">
@@ -141,7 +171,7 @@
       </article>
 
       <article class="project-card"
-         data-topics="DistributedSystems PerformanceEngineering Concurrency CloudInfrastructure MLSystems Python TypeScript PostgreSQL Kafka Docker Kubernetes">
+         data-topics="DistributedSystems PerformanceEngineering Concurrency CloudInfrastructure MLSystems Python TypeScript PostgreSQL Kafka Docker Kubernetes AgenticAI LLMSystems React Redis Prometheus Grafana">
       <div class="project-body">
         <div class="project-main">
         <div class="project-head">
@@ -152,10 +182,14 @@
         <ul class="tag-list">
           <li>Python</li>
           <li>TypeScript</li>
+          <li>React</li>
           <li>PostgreSQL</li>
+          <li>Redis</li>
           <li>Apache Kafka</li>
           <li>Docker</li>
           <li>Kubernetes</li>
+          <li>Prometheus</li>
+          <li>Grafana</li>
         </ul>
 
         <p class="timeline-summary">
@@ -189,7 +223,7 @@
       </article>
 
       <article class="project-card"
-         data-topics="SystemsProgramming PerformanceEngineering Concurrency CPP CMake GoogleTest GoogleBenchmark">
+         data-topics="SystemsProgramming PerformanceEngineering Concurrency CPP CMake GoogleTest GoogleBenchmark Python GitHubActions">
       <div class="project-body">
         <div class="project-main">
         <div class="project-head">
@@ -199,6 +233,7 @@
 
         <ul class="tag-list">
           <li>C++20</li>
+          <li>Python</li>
           <li>CMake</li>
           <li>GoogleTest</li>
           <li>Google Benchmark</li>
@@ -217,7 +252,7 @@
             are maintained with ordered maps, orders at each level use FIFO lists, and an order-ID index maps directly to stored iterators. 
             The matching engine includes a lock-free single-producer single-consumer queue and a single-threaded execution path, with cache-line-aligned 
             order storage and a CMake build configured for native optimization. Latency is measured using RDTSC with LFENCE serialization and calibration 
-            against CLOCK_MONOTONIC_RAW, while we use Google Benchmark unit tests, and statistical distribution analysis (Python) to characterise the 
+            against CLOCK_MONOTONIC_RAW, while we use GoogleTest for unit tests, Google Benchmark for micro-benchmarks, and statistical distribution analysis (Python) to characterise the 
             effects of the implementation choices and trade-offs made.</p>
         </div>
 
@@ -244,7 +279,7 @@
       </article>
 
       <article class="project-card project-card--footnoted"
-         data-topics="DistributedSystems SystemsProgramming PerformanceEngineering Concurrency CloudInfrastructure CPP Docker libcurl ThriftRPC Jaeger RabbitMQ">
+         data-topics="DistributedSystems SystemsProgramming PerformanceEngineering Concurrency CloudInfrastructure CPP Docker libcurl ThriftRPC Jaeger RabbitMQ AgenticAI LLMSystems Redis Nginx Lua DeathStarBench">
       <div class="project-body">
         <div class="project-main">
         <div class="project-head">
@@ -254,11 +289,15 @@
 
         <ul class="tag-list">
           <li>C++17</li>
+          <li>Lua</li>
           <li>libcurl</li>
           <li>Thrift RPC</li>
+          <li>nginx</li>
           <li>Docker</li>
           <li>Jaeger</li>
+          <li>Redis</li>
           <li>RabbitMQ</li>
+          <li>DeathStarBench</li>
         </ul>
 
         <p class="timeline-summary">
@@ -384,6 +423,6 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
 </body>
 </html>

@@ -670,6 +670,39 @@ a:hover {
     color: #ffffff;
   }
 
+  /* projects page: filters grouped into labelled rows */
+  .pub-filters--grouped {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 14px;
+  }
+  .filter-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .filter-group-label {
+    flex: none;
+    width: 84px;
+    padding-top: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-faint);
+  }
+  .filter-group-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+  }
+  @media (max-width: 640px) {
+    .filter-group { flex-direction: column; gap: 6px; }
+    .filter-group-label { width: auto; padding-top: 0; }
+  }
+
   .pub-list {
     list-style: none;
     margin: 0;
