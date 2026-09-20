@@ -796,6 +796,17 @@ a:hover {
     font-size: 0.72rem;
     color: var(--text-faint);
   }
+  .project-footnote .footnote-brand { white-space: nowrap; }
+  .project-footnote .footnote-logo {
+    display: inline-block; /* global img rule is display:block */
+    height: 0.9em; /* logo cap height (19/24 of the image) matches the mono text's */
+    width: auto;
+    vertical-align: -0.19em; /* sits the logo's baseline on the text baseline */
+  }
+  .project-footnote .footnote-logo--play {
+    height: 1.28em; /* wordmark cap height is 55% of the image, so this matches the text's */
+    vertical-align: -0.29em;
+  }
 
   .project-head {
     display: flex;
@@ -885,6 +896,13 @@ a:hover {
   @media (max-width: 900px) {
     .project-body { flex-direction: column; }
     .project-figure { width: 100%; max-width: 480px; }
+    .project-card--footnoted { padding-bottom: 30px; }
+    .project-footnote {
+      position: static;
+      display: block;
+      margin-top: 18px;
+      text-align: right;
+    }
   }
 
   .project-card ul.bullets {

@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css?v=20">
+<link rel="stylesheet" href="css/style.css?v=24">
 </head>
 <body>
 
@@ -63,6 +63,8 @@
       <button class="pub-filter" data-filter="Kafka">Apache Kafka</button>
       <button class="pub-filter" data-filter="Docker">Docker</button>
       <button class="pub-filter" data-filter="Kubernetes">Kubernetes</button>
+      <button class="pub-filter" data-filter="Numba">Numba</button>
+      <button class="pub-filter" data-filter="PyTorch">PyTorch</button>
       <button class="pub-filter" data-filter="CMake">CMake</button>
       <button class="pub-filter" data-filter="GoogleTest">GoogleTest</button>
       <button class="pub-filter" data-filter="GoogleBenchmark">Google Benchmark</button>
@@ -81,6 +83,62 @@
   <div class="section-inner section-inner--projects">
 
     <div class="project-grid">
+
+      <article class="project-card project-card--footnoted"
+         data-topics="PerformanceEngineering MLSystems Python Numba PyTorch">
+      <div class="project-body">
+        <div class="project-main">
+        <div class="project-head">
+          <h3>AI Chessathon Chess Engine</h3>
+          <span class="project-status">2026</span>
+        </div>
+
+        <ul class="tag-list">
+          <li>Python</li>
+          <li>Numba</li>
+          <li>NumPy</li>
+          <li>PyTorch</li>
+        </ul>
+
+        <p class="timeline-summary">
+          Chess engine built around a HalfKP NNUE evaluation network, trained from scratch and updated incrementally in int16.
+      </p>
+
+
+        <div class="project-desc">
+          <p>A chess engine gets a few seconds per move, so its evaluation has to be accurate enough to steer the search and cheap enough to run hundreds of thousands 
+            of times a second. This engine, built solo for the AI Chessathon, does that with an NNUE (efficiently updatable neural network) trained from scratch and 
+            evaluated inside a numba-compiled search. The network uses HalfKP features: for each side, one binary input for every combination of its own king square, 
+            the square of a non-king piece, and that piece's kind and owner, giving 40,960 inputs of which at most 30 are ever active. A 544-unit first layer turns them 
+            into an accumulator per side, which is updated incrementally by adding and subtracting the rows of the pieces that moved and is rebuilt only when a king moves. 
+            The two accumulators are ordered by side to move, passed through a clipped ReLU and reduced to a single centipawn score, with a learned piece-square term added 
+            on a skip path. Weights are quantised to int16, so inference is pure integer arithmetic. Training used 260 million Lichess positions labelled with deep 
+            Stockfish analysis, randomly mirrored, with a factorised first layer so rare king placements borrow statistics from common ones, and a loss defined on win 
+            probability, so a 50-centipawn error matters near equality and barely at +900.</p>
+        </div>
+
+      <div class="pill-row">
+
+          <a class="pill"
+   href="https://github.com/AyanBinRafaih/ai-chessathon-agent"
+   target="_blank"
+   rel="noopener noreferrer">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+    Code
+</a>
+      </div>
+
+        </div>
+
+        <figure class="project-figure">
+          <a href="assets/img/projects/chessengine.png" target="_blank" rel="noopener">
+            <img src="assets/img/projects/chessengine.png" alt="Chess engine architecture: a numba-compiled alpha-beta search over bitboards, evaluated by an incrementally updated NNUE whose weights are trained offline on Lichess positions." loading="lazy">
+          </a>
+        </figure>
+      </div>
+      
+      <span class="project-footnote">Placed 41st/465 (Elo 2344) and 31st/334 in the Swiss round qualifier at AI Chessathon, sponsored <span class="footnote-brand">by <img class="footnote-logo" src="assets/img/optiver-logo.svg" width="109" height="24" alt="Optiver"></span></span>
+      </article>
 
       <article class="project-card"
          data-topics="DistributedSystems PerformanceEngineering Concurrency CloudInfrastructure MLSystems Python TypeScript PostgreSQL Kafka Docker Kubernetes">
@@ -246,7 +304,7 @@
       <span class="project-footnote">* Contributor</span>
       </article>
 
-      <article class="project-card"
+      <article class="project-card project-card--footnoted"
          data-topics="MobileComputing HCI MLSystems Java Python Firebase Android">
       <div class="project-body">
         <div class="project-main">
@@ -282,6 +340,8 @@
 
         </div>
       </div>
+      
+      <span class="project-footnote">Published <span class="footnote-brand">on <img class="footnote-logo footnote-logo--play" src="assets/img/google-play-logo.svg" width="512" height="101" alt="Google Play"></span></span>
       </article>
 
     </div>
