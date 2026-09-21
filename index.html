@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css?v=28">
+<link rel="stylesheet" href="css/style.css?v=30">
 </head>
 <body>
 
@@ -43,11 +43,11 @@
         <p class="tagline"></p>
 
         <div class="link-list">
-          <button type="button" class="link-item link-item--email" id="email-copy" data-email="ayanbrafaih@gmail.com" aria-label="Copy email address">
+          <a class="link-item link-item--email" id="email-copy" href="mailto:ayanbrafaih@gmail.com" data-email="ayanbrafaih@gmail.com" aria-label="Email ayanbrafaih@gmail.com">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"></path></svg>
             <span class="link-label">Email</span>
-            <span class="icon-tooltip">Click to copy</span>
-          </button>
+            <span class="icon-tooltip">Email me</span>
+          </a>
 
           <a class="link-item link-item--github" href="https://github.com/ayanbinrafaih" target="_blank" rel="noopener" aria-label="GitHub">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
@@ -100,8 +100,7 @@
       </p>
 
       <p>
-        <p>
-          Recently, I have worked on benchmarking SOTA LLMs on olympiad problems, evaluating reasoning traces for complex problems in physics and astrophysics (using human annotators and LLM-as-a-Judge techniques), identifying conceptual pitfalls, logical fallacies and hallucination instances in model responses.
+        Recently, I have worked on benchmarking SOTA LLMs on olympiad problems, evaluating reasoning traces for complex problems in physics and astrophysics (using human annotators and LLM-as-a-Judge techniques), identifying conceptual pitfalls, logical fallacies and hallucination instances in model responses.
           I have also worked with
           <a class="link-person" href="https://cv.hal.science/zachary-murray" target="_blank" rel="noopener noreferrer">
             Dr. Zachary Murray</a> at
@@ -110,7 +109,6 @@
           and Université Côte d'Azur on using simple, light-weight architectures for false positive detection using derived planetary parameters.
           Alongside that, I was at <a class="link-place" href="https://www.ucl.ac.uk/hawkes-institute" target="_blank" rel="noopener noreferrer">UCL Hawkes Institute</a>
           working with <a class="link-person" href="https://profiles.ucl.ac.uk/47802-evangelos-mazomenos" target="_blank" rel="noopener noreferrer">Prof. Evangelos Mazomenos</a> on robotic surgical skill classification using Bayesian-optimisation-based learning methods and acceleration-based kinematics features.
-        </p>
       </p>
       <p>
         Previously, I won an honourable mention at the 2nd International Olympiad of Artificial Intelligence (IOAI 2025).
@@ -123,16 +121,16 @@
       </p>
       <div class="research-interests">
         <strong>Research interests:</strong>
-        <a href="#">Mechanistic Interpretability</a> ·
-        <a href="#">Agentic AI Systems</a> ·
-        <a href="#">ML Systems</a> ·
-        <a href="#">Reasoning Benchmarks</a> ·
-        <a href="#">Large Language Models</a> ·
-        <a href="#">AI4Science</a>
-        <a href="#">Low-Latency System Architecture</a> ·
-        <a href="#">Computational Physics</a> ·
-        <a href="#">Optimisation Techniques</a> ·
-        <a href="#">Surgical Robotics</a>
+        <span class="interest">Mechanistic Interpretability</span> ·
+        <span class="interest">Agentic AI Systems</span> ·
+        <span class="interest">ML Systems</span> ·
+        <span class="interest">Reasoning Benchmarks</span> ·
+        <span class="interest">Large Language Models</span> ·
+        <span class="interest">AI4Science</span> ·
+        <span class="interest">Low-Latency System Architecture</span> ·
+        <span class="interest">Computational Physics</span> ·
+        <span class="interest">Optimisation Techniques</span> ·
+        <span class="interest">Surgical Robotics</span>
       </div>
     </div>
   </section>
@@ -274,15 +272,15 @@
   <div class="footer-wrap">
     <p>© 2026 Ayan Bin Rafaih. Last updated September 2026.</p>
     <div class="link-list link-list--inline">
-      <button type="button" class="link-item link-item--email" id="email-copy-footer" data-email="ayanbrafaih@gmail.com" aria-label="Copy email address">
+      <a class="link-item link-item--email" id="email-copy-footer" href="mailto:ayanbrafaih@gmail.com" data-email="ayanbrafaih@gmail.com" aria-label="Email ayanbrafaih@gmail.com">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"></path></svg>
         <span class="link-label">Email</span>
-        <span class="icon-tooltip">Copy email</span>
-      </button>
-      <a class="link-item link-item--x" href="#" target="_blank" rel="noopener" aria-label="X (Twitter)">
+        <span class="icon-tooltip">Email me</span>
+      </a>
+      <a class="link-item link-item--x" href="https://x.com/ayanbinrafaih" target="_blank" rel="noopener" aria-label="X (Twitter)">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.933zm-1.291 19.49h2.039L6.486 3.24H4.298l13.312 17.403z"></path></svg>
         <span class="link-label">X</span>
-        <span class="icon-tooltip">X — add link</span>
+        <span class="icon-tooltip">X</span>
       </a>
       <a class="link-item link-item--github" href="https://github.com/ayanbinrafaih" target="_blank" rel="noopener" aria-label="GitHub">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>

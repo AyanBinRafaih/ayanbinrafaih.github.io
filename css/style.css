@@ -485,6 +485,18 @@ a:hover {
   .link-list--inline .link-item svg,
   .link-list--inline .link-item--x svg { width: 14px; height: 14px; }
 
+  /* narrow screens: five labelled links can't share a row, so show icons only (aria-labels stay) */
+  @media (max-width: 560px) {
+    .link-list--inline { flex-wrap: nowrap; gap: 0 24px; }
+    .link-list--inline .link-label {
+      position: absolute;
+      width: 1px; height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+  }
+
   .hero-photo {
     position: relative;
     aspect-ratio: 2 / 3;
@@ -1014,13 +1026,9 @@ a:hover {
     color: var(--text);
 }
 
-.research-interests a {
+.research-interests .interest {
     color: var(--link);
-    text-decoration: none;
-}
-
-.research-interests a:hover {
-    text-decoration: underline;
+    font-weight: 500;
 }
 
 .lead-item { padding: 26px 0; }
