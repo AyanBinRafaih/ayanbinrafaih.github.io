@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initScrollSpy();
   initPubPanels();
   initCopyButtons();
+  initDateSort();
   initFilters();
   initEmailCopy();
 });
@@ -120,11 +121,28 @@ function fallbackCopy(text, cb) {
   if (cb) cb();
 }
 
+// hackathons.html: children of [data-sort="date-desc"] carry data-date="YYYY-MM" and are put
+// newest month first, so the HTML order does not matter. Equal months keep their HTML order.
+function initDateSort() {
+  document.querySelectorAll('[data-sort="date-desc"]').forEach(function (list) {
+    var children = Array.prototype.slice.call(list.children).filter(function (el) {
+      return el.hasAttribute("data-date");
+    });
+    children
+      .map(function (el, i) { return { el: el, date: el.getAttribute("data-date"), i: i }; })
+      .sort(function (a, b) {
+        if (a.date === b.date) return a.i - b.i;
+        return a.date < b.date ? 1 : -1;
+      })
+      .forEach(function (entry) { list.appendChild(entry.el); });
+  });
+}
+
 function initFilters() {
   var bar = document.querySelector(".pub-filters");
   if (!bar) return;
   var buttons = bar.querySelectorAll(".pub-filter");
-  var items = document.querySelectorAll(".pub-item, .talk-item, .project-card");
+  var items = document.querySelectorAll(".pub-item, .talk-item, .project-card, .hack-card");
 
   // Whole-token match: "Go" must not match "GoogleTest", "Java" must not match "JavaScript".
   function matches(item, topic) {
